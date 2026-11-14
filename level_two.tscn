@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bif4dboepj42s"]
 
+[ext_resource type="PackedScene" uid="uid://b8eax1dbgc614" path="res://beetle.tscn" id="1_7v2bu"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_200mo"]
 size = Vector2(1757, 11.9999695)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(219, 29.5)
 
-[node name="Level two" type="Node2D" unique_id=881445006]
+[node name="Level 2" type="Node2D" unique_id=881445006]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=407349135]
 
@@ -94,9 +96,11 @@ offset_top = 329.0
 offset_right = 138.0
 offset_bottom = 359.0
 
-[node name="Next level" type="ColorRect" parent="." unique_id=233955829]
-offset_left = -61.0
-offset_top = 206.0
-offset_right = 38.0
-offset_bottom = 329.0
-color = Color(0, 0.7831889, 0.41179675, 1)
+[node name="CharacterBody2D" parent="." unique_id=1867351165 instance=ExtResource("1_7v2bu")]
+position = Vector2(794, 404)
+
+[node name="CharacterBody2D3" parent="." unique_id=1544377945 instance=ExtResource("1_7v2bu")]
+position = Vector2(151, 228)
+
+[node name="CharacterBody2D2" parent="." unique_id=1615361619 instance=ExtResource("1_7v2bu")]
+position = Vector2(457, 292)

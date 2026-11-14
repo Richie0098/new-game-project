@@ -15,13 +15,16 @@ shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1577936499]
 offset_left = 100.0
-offset_top = 47.0
+offset_top = 46.0
 offset_right = 149.0
-offset_bottom = 167.0
+offset_bottom = 166.0
 color = Color(0.9507839, 0.16626629, 1.92523e-07, 1)
 
 [node name="Rayfloor" type="RayCast2D" parent="." unique_id=217594805]
-position = Vector2(136, 151)
+position = Vector2(148, 154)
+
+[node name="Rayfloor2" type="RayCast2D" parent="." unique_id=1071542182]
+position = Vector2(102, 154)
 
 [node name="Raywall" type="RayCast2D" parent="." unique_id=1650277571]
 position = Vector2(132, 115)
