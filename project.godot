@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SettingsManager_gd="*uid://beyhdqpojka8e"
+SettingsManager="*uid://beyhdqpojka8e"
 
 [display]
 
