@@ -10,30 +10,10 @@
 size = Vector2(1178, 20)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jybc2"]
-radius = 64.0
-height = 130.0
+radius = 48.0
+height = 132.0
 
 [node name="Level 1" type="Node2D" unique_id=1352761477]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1989570332]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=255971054]
-position = Vector2(569, 657)
-shape = SubResource("RectangleShape2D_ikdr8")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1173447855]
-position = Vector2(568, -9)
-shape = SubResource("RectangleShape2D_ikdr8")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1948911907]
-position = Vector2(-9, 319)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_ikdr8")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2078232193]
-position = Vector2(1162, 231)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2089470412]
 offset_left = -23.0
@@ -61,6 +41,26 @@ offset_right = 2363.0
 offset_bottom = -201.0
 rotation = 1.5707964
 
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1989570332]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=255971054]
+position = Vector2(582, 643)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1173447855]
+position = Vector2(574, 12)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1948911907]
+position = Vector2(7, 318)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2078232193]
+position = Vector2(1146, 232)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ikdr8")
+
 [node name="CharacterBody2D" parent="." unique_id=1867351165 instance=ExtResource("1_hn12h")]
 position = Vector2(571, 291)
 
@@ -81,10 +81,9 @@ shape = SubResource("CapsuleShape2D_jybc2")
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D2" unique_id=152071208 groups=["enemy"]]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D2/Area2D" unique_id=1394475913]
-position = Vector2(1.9073486e-06, -2.0000224)
-scale = Vector2(1.1927084, 1.1311979)
-polygon = PackedVector2Array(-60, 36, -42, 52, -27, 61, 27, 60, 43, 52, 60, 35, 44, -35, 28, -52, 11, -60, -10, -60, -27, -52, -44, -35)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D2/Area2D" unique_id=1365672359]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-60, 38, -44, 55, -28, 63, 28, 63, 44, 55, 60, 38, 45, -34, 29, -51, 12, -59, -12, -59, -28, -50, -45, -34)
 
 [node name="Door and Exit" parent="." unique_id=1667387201 instance=ExtResource("3_hn12h")]
 position = Vector2(0, 23)
