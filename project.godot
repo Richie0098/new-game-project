@@ -20,10 +20,13 @@ config/icon="res://icon.svg"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[dotnet]
+
+project/assembly_name="New Game Project"
+
 [global_group]
 
-Player="Player"
-player="thing to go throught"
+enemy="deal damage"
 
 [input]
 

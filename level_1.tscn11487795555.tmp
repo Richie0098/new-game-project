@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://l1dhtqji1d6x"]
+
+[ext_resource type="PackedScene" uid="uid://b8eax1dbgc614" path="res://beetle.tscn" id="1_hn12h"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_5hph3"]
+[ext_resource type="PackedScene" uid="uid://cib0rcjst7l30" path="res://exit.tscn" id="4_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_rka8t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
+size = Vector2(1178, 20)
+
+[node name="Level 1" type="Node2D" unique_id=1352761477]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1989570332]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=255971054]
+position = Vector2(569, 657)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1173447855]
+position = Vector2(568, -9)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1948911907]
+position = Vector2(-9, 319)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2078232193]
+position = Vector2(1162, 231)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2089470412]
+offset_left = -21.0
+offset_top = 646.0
+offset_right = 1168.0
+offset_bottom = 685.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=640036137]
+offset_left = -25.0
+offset_top = -42.0
+offset_right = 1164.0
+offset_bottom = -3.0
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=2144090643]
+offset_left = 4.0
+offset_top = -142.0
+offset_right = 1193.0
+offset_bottom = -103.0
+rotation = 1.5707964
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1249511806]
+offset_left = 1187.0
+offset_top = -238.0
+offset_right = 2376.0
+offset_bottom = -199.0
+rotation = 1.5707964
+
+[node name="CharacterBody2D" parent="." unique_id=1867351165 instance=ExtResource("1_hn12h")]
+position = Vector2(571, 291)
+
+[node name="Door" type="Node2D" parent="." unique_id=153387677]
+
+[node name="Exit" parent="Door" unique_id=1917071933 instance=ExtResource("4_ihfcg")]
+position = Vector2(-663, -36)
+destination_level_tag = "Level_2"
+
+[node name="blob" parent="." unique_id=1153452522 instance=ExtResource("4_rka8t")]
+position = Vector2(101, 525)
+
+[node name="Player" parent="." unique_id=1032843734 instance=ExtResource("4_5hph3")]
+position = Vector2(297, 361)

@@ -11,11 +11,10 @@ script = ExtResource("1_4flbx")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=975149066]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139063727]
-position = Vector2(215, 360.5)
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=667744280]
-offset_left = 172.0
-offset_top = 271.0
-offset_right = 266.0
-offset_bottom = 449.0
+offset_left = -48.0
+offset_top = -90.0
+offset_right = 46.0
+offset_bottom = 88.0
