@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://kxs4rwvvd062"]
 
 [ext_resource type="Texture2D" uid="uid://ddt8o00qy18l2" path="res://Untitled.png" id="1_iplyg"]
+[ext_resource type="Script" uid="uid://cu2vk1xf57n55" path="res://Scripts/blob.gd" id="1_wigkh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8o5h"]
+radius = 54.0
+height = 108.0
 
 [node name="Blob" type="Node" unique_id=1990545549]
+script = ExtResource("1_wigkh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1240126863]
 scale = Vector2(0.1, 0.1)
