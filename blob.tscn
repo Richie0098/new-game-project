@@ -16,4 +16,4 @@ texture = ExtResource("1_iplyg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=462239500]
 shape = SubResource("CapsuleShape2D_jybc2")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=152071208]
+[node name="Area2D" type="Area2D" parent="." unique_id=152071208 groups=["enemy"]]
