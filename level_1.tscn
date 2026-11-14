@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8eax1dbgc614" path="res://beetle.tscn" id="1_hn12h"]
 [ext_resource type="PackedScene" uid="uid://d30ebo7uakvax" path="res://character_body_2d.tscn" id="2_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://cib0rcjst7l30" path="res://exit.tscn" id="4_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_rka8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1178, 20)
@@ -59,9 +60,13 @@ rotation = 1.5707964
 position = Vector2(571, 291)
 
 [node name="Player" parent="." unique_id=1032843734 instance=ExtResource("2_ihfcg")]
+position = Vector2(91, -14)
 
 [node name="Door" type="Node2D" parent="." unique_id=153387677]
 
 [node name="Exit" parent="Door" unique_id=1917071933 instance=ExtResource("4_ihfcg")]
 position = Vector2(-663, -36)
 destination_level_tag = "Level_2"
+
+[node name="blob" parent="." unique_id=1153452522 instance=ExtResource("4_rka8t")]
+position = Vector2(101, 525)
