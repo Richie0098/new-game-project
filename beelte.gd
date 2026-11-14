@@ -26,7 +26,8 @@ func _physics_process(delta: float) -> void:
 
 	if hit_wall or at_ledge:
 		direction *= -1
-		ray_wall.target_position.x = 30 * direction
+		ray_wall.target_position.x = 128 * direction
+		$Sprite2D.scale.x *= -1
 
 	velocity.x = direction * SPEED
 	move_and_slide()

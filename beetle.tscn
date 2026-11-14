@@ -1,31 +1,30 @@
 [gd_scene format=3 uid="uid://b8eax1dbgc614"]
 
 [ext_resource type="Script" uid="uid://ddb883uftyghl" path="res://beelte.gd" id="1_lw8d3"]
+[ext_resource type="Texture2D" uid="uid://c3queqtw1y4if" path="res://beetle.png" id="2_x56ib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
-size = Vector2(48, 105)
+size = Vector2(128, 72)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1867351165]
 position = Vector2(594, 274)
 script = ExtResource("1_lw8d3")
 
+[node name="Raywall" type="RayCast2D" parent="." unique_id=1650277571]
+position = Vector2(0, 28)
+target_position = Vector2(128, 0)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=366836511]
-position = Vector2(125, 113)
+position = Vector2(0, 28)
 shape = SubResource("RectangleShape2D_ikdr8")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1577936499]
-offset_left = 100.0
-offset_top = 46.0
-offset_right = 149.0
-offset_bottom = 166.0
-color = Color(0.9507839, 0.16626629, 1.92523e-07, 1)
-
 [node name="Rayfloor" type="RayCast2D" parent="." unique_id=217594805]
-position = Vector2(148, 154)
+position = Vector2(44, 64)
 
 [node name="Rayfloor2" type="RayCast2D" parent="." unique_id=1071542182]
-position = Vector2(102, 154)
+position = Vector2(-36, 64)
 
-[node name="Raywall" type="RayCast2D" parent="." unique_id=1650277571]
-position = Vector2(93, 126)
-target_position = Vector2(66, 0)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1199579251]
+texture_filter = 1
+scale = Vector2(-8, 8)
+texture = ExtResource("2_x56ib")

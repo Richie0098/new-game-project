@@ -67,15 +67,14 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="CharacterBody2D" parent="." unique_id=1867351165 instance=ExtResource("1_hn12h")]
-position = Vector2(571, 291)
+position = Vector2(769, 422)
 
 [node name="Player" parent="." unique_id=1032843734 instance=ExtResource("4_5hph3")]
 position = Vector2(297, 361)
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1153452522 node_paths=PackedStringArray("player") groups=["enemy"]]
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1153452522 groups=["enemy"]]
 position = Vector2(94, 558)
 script = ExtResource("3_rka8t")
-player = NodePath("../Player")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=1739856540]
 texture_filter = 1

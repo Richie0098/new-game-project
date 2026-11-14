@@ -3,8 +3,6 @@ extends CharacterBody2D
 var chargingJump = false
 var playerRoot
 
-@export var player: Player2
-
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
