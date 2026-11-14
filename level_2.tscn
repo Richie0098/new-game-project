@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8eax1dbgc614" path="res://beetle.tscn" id="1_jg0dc"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_nmjpi"]
 [ext_resource type="PackedScene" uid="uid://c4tra06lot14w" path="res://door_and_exit.tscn" id="3_xdadj"]
+[ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_1y8me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_200mo"]
 size = Vector2(1757, 11.9999695)
@@ -112,3 +113,7 @@ position = Vector2(1050, 353)
 
 [node name="Door and Exit" parent="." unique_id=1667387201 instance=ExtResource("3_xdadj")]
 position = Vector2(-1118, -315)
+next_level = "uid://dhrlh58k2ijcx"
+
+[node name="CharacterBody2D4" parent="." unique_id=1153452522 instance=ExtResource("4_1y8me")]
+position = Vector2(567, 189)

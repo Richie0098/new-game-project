@@ -8,6 +8,7 @@ size = Vector2(67.5, 159)
 [node name="Door and Exit" type="Node2D" unique_id=1667387201]
 position = Vector2(162, 148)
 script = ExtResource("1_a38fc")
+next_level = "uid://b16cmc86ys7qa"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1193654729]
 position = Vector2(19, -4)
@@ -23,5 +24,4 @@ color = Color(0, 0.6320503, 0.73101866, 1)
 position = Vector2(1116.75, 567)
 shape = SubResource("RectangleShape2D_ikdr8")
 
-[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
