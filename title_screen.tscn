@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://btg117njqy6w6"]
+
+[ext_resource type="Script" uid="uid://ca7u754b2ucu0" path="res://title_screen.gd" id="1_v6p8y"]
+
+[node name="Title screen" type="Node2D" unique_id=128551134]
+script = ExtResource("1_v6p8y")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=985499365]
+offset_right = 1154.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1623968218]
+offset_left = 212.0
+offset_top = 151.0
+offset_right = 944.0
+offset_bottom = 226.0
+theme_override_font_sizes/normal_font_size = 36
+text = "Hello and welcome to : (add game name)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1391565057]
+offset_left = 455.0
+offset_top = 330.0
+offset_right = 680.0
+offset_bottom = 436.0
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1598305279]
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+text = "start"
+
+[node name="volume" type="Button" parent="VBoxContainer" unique_id=1447170150]
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+text = "volume"
+
+[node name="settings" type="Button" parent="VBoxContainer" unique_id=1018819453]
+layout_mode = 2
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+text = "settings"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="VBoxContainer/settings" to="." method="_on_settings_pressed"]
