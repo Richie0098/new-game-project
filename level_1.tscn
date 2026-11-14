@@ -88,5 +88,6 @@ polygon = PackedVector2Array(-60, 36, -42, 52, -27, 61, 27, 60, 43, 52, 60, 35, 
 
 [node name="Door and Exit" parent="." unique_id=1667387201 instance=ExtResource("3_hn12h")]
 position = Vector2(0, 23)
+next_level = null
 
 [connection signal="area_entered" from="CharacterBody2D2/Area2D" to="Player" method="_on_area_enemy_entered"]
