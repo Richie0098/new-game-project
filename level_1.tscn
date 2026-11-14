@@ -81,6 +81,11 @@ shape = SubResource("CapsuleShape2D_jybc2")
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D2" unique_id=152071208 groups=["enemy"]]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D2/Area2D" unique_id=1394475913]
+position = Vector2(1.9073486e-06, -2.0000224)
+scale = Vector2(1.1927084, 1.1311979)
+polygon = PackedVector2Array(-60, 36, -42, 52, -27, 61, 27, 60, 43, 52, 60, 35, 44, -35, 28, -52, 11, -60, -10, -60, -27, -52, -44, -35)
+
 [node name="Door and Exit" parent="." unique_id=1667387201 instance=ExtResource("3_hn12h")]
 position = Vector2(0, 23)
 
