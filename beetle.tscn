@@ -12,7 +12,7 @@ script = ExtResource("1_lw8d3")
 
 [node name="Raywall" type="RayCast2D" parent="." unique_id=1650277571]
 position = Vector2(0, 28)
-target_position = Vector2(128, 0)
+target_position = Vector2(72, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=366836511]
 position = Vector2(0, 28)

@@ -7,7 +7,7 @@
 radius = 64.0
 height = 130.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1153452522]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1153452522 groups=["enemy"]]
 script = ExtResource("1_wigkh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1739856540]
