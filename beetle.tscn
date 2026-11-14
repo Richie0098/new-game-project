@@ -27,5 +27,5 @@ position = Vector2(148, 154)
 position = Vector2(102, 154)
 
 [node name="Raywall" type="RayCast2D" parent="." unique_id=1650277571]
-position = Vector2(132, 115)
+position = Vector2(93, 126)
 target_position = Vector2(66, 0)
