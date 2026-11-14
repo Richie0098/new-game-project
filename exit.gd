@@ -9,5 +9,5 @@ class_name Door
 @onready var spawn = $Spawn
 
 func Exit(body: Node2D) -> void:
-	if body is Player:
+	if body is Player2:
 		get_tree().change_scene_to_file("res://level_2.tscn")

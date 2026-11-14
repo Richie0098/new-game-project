@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cu2vk1xf57n55" path="res://Scripts/blob.gd" id="3_rka8t"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_5hph3"]
 [ext_resource type="PackedScene" uid="uid://cib0rcjst7l30" path="res://exit.tscn" id="4_ihfcg"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="4_j7kpp"]
+[ext_resource type="Texture2D" uid="uid://jvxdkc72ewg8" path="res://blob.png" id="5_rka8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1178, 20)
@@ -78,11 +78,13 @@ position = Vector2(79, 570)
 script = ExtResource("3_rka8t")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=1739856540]
-texture = ExtResource("4_j7kpp")
+texture_filter = 1
+scale = Vector2(8, 8)
+texture = ExtResource("5_rka8t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=462239500]
 shape = SubResource("CapsuleShape2D_jybc2")
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D2" unique_id=152071208 groups=["enemy"]]
 
-[connection signal="area_entered" from="CharacterBody2D2/Area2D" to="Player" method="_on_enemy_area_entered"]
+[connection signal="area_entered" from="CharacterBody2D2/Area2D" to="Player" method="_on_area_enemy_entered"]

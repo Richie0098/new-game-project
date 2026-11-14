@@ -25,6 +25,5 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
-func _on_enemy_area_entered(area: Area2D) -> void:
+func _on_area_enemy_entered(area: Area2D) -> void:
 	pass # Replace with function body.
