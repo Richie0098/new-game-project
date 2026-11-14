@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4pqund3nukl7"]
 
 [ext_resource type="PackedScene" uid="uid://d30ebo7uakvax" path="res://character_body_2d.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://b8eax1dbgc614" path="res://beetle.tscn" id="2_0e48y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1168, 48.5)
@@ -36,3 +37,5 @@ offset_right = 1155.0
 offset_bottom = 671.0
 
 [node name="CharacterBody2D" parent="." unique_id=1032843734 instance=ExtResource("1_wtcfe")]
+
+[node name="CharacterBody2D2" parent="." unique_id=1867351165 instance=ExtResource("2_0e48y")]
