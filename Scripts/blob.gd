@@ -5,7 +5,7 @@ var playerRoot
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		velocity += get_gravity() * 128 * delta
+		velocity += get_gravity() * delta
 	else:
 		velocity.y = 0
 	StateMachine()
@@ -13,14 +13,14 @@ func _physics_process(delta: float) -> void:
 
 func StateMachine() -> void:
 	playerRoot = $"../Player"
-	print(GetDist(playerRoot.position.x , playerRoot.position.y, position.x, position.y))
-	if (GetDist(playerRoot.position.x, playerRoot.position.y, position.x, position.y) < 960 and is_on_floor()):
-		velocity += Vector2(0, -400)
-	else:
+	if (GetDist(playerRoot.position.x, playerRoot.position.y, position.x, position.y) < 200 and is_on_floor()):
+		velocity += Vector2(0, -800)
+		print("e")
+	elif is_on_floor():
 		if playerRoot.position.x < position.x:
-			velocity.x = -400
+			velocity.x = -200
 		else:
-			velocity.x = 400
+			velocity.x = 200
 
 func GetDist(x1, y1, x2, y2) -> float:
 	return sqrt((x2-x1) ** 2 + (y2 - y1) ** 2)
