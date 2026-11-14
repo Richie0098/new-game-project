@@ -36,29 +36,29 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2089470412]
-offset_left = -21.0
-offset_top = 646.0
-offset_right = 1168.0
-offset_bottom = 685.0
+offset_left = -23.0
+offset_top = 632.0
+offset_right = 1166.0
+offset_bottom = 671.0
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=640036137]
 offset_left = -25.0
-offset_top = -42.0
+offset_top = -17.0
 offset_right = 1164.0
-offset_bottom = -3.0
+offset_bottom = 22.0
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=2144090643]
-offset_left = 4.0
-offset_top = -142.0
-offset_right = 1193.0
-offset_bottom = -103.0
+offset_left = 18.0
+offset_top = -144.0
+offset_right = 1207.0
+offset_bottom = -105.0
 rotation = 1.5707964
 
 [node name="ColorRect4" type="ColorRect" parent="." unique_id=1249511806]
-offset_left = 1187.0
-offset_top = -238.0
-offset_right = 2376.0
-offset_bottom = -199.0
+offset_left = 1174.0
+offset_top = -240.0
+offset_right = 2363.0
+offset_bottom = -201.0
 rotation = 1.5707964
 
 [node name="CharacterBody2D" parent="." unique_id=1867351165 instance=ExtResource("1_hn12h")]
@@ -74,7 +74,7 @@ destination_level_tag = "Level_2"
 position = Vector2(297, 361)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1153452522]
-position = Vector2(79, 570)
+position = Vector2(94, 558)
 script = ExtResource("3_rka8t")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=1739856540]
