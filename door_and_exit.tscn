@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c4tra06lot14w"]
+
+[ext_resource type="Script" uid="uid://dwmxly1do30e3" path="res://door_and_exit.gd" id="1_a38fc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
+size = Vector2(67.5, 159)
+
+[node name="Door and Exit" type="Node2D" unique_id=1667387201]
+position = Vector2(162, 148)
+script = ExtResource("1_a38fc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1193654729]
+position = Vector2(19, -4)
+
+[node name="ColorRect" type="ColorRect" parent="Area2D" unique_id=1541095564]
+offset_left = 1083.0
+offset_top = 484.0
+offset_right = 1151.0
+offset_bottom = 644.0
+color = Color(0, 0.6320503, 0.73101866, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1773728633]
+position = Vector2(1116.75, 567)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
