@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://kxs4rwvvd062"]
+
+[ext_resource type="Texture2D" uid="uid://ddt8o00qy18l2" path="res://Untitled.png" id="1_iplyg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8o5h"]
+
+[node name="Blob" type="Node" unique_id=1990545549]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1240126863]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_iplyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=434819197]
+shape = SubResource("CapsuleShape2D_t8o5h")
