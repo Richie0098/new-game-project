@@ -35,6 +35,10 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.animation = "jump"
 		else:
 			$AnimatedSprite2D.animation = "fall"
+	if velocity.x < 0:
+		$AnimatedSprite2D.scale.x = -8
+	else:
+		$AnimatedSprite2D.scale.x = 8
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
