@@ -47,7 +47,7 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_jybc2")
 
 [node name="Player" parent="." unique_id=1032843734 instance=ExtResource("1_ayd5w")]
-position = Vector2(278, 888)
+position = Vector2(273, 878)
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=236098668]
 
@@ -96,5 +96,27 @@ shape = SubResource("CircleShape2D_ibu4m")
 
 [node name="Sprite2D" type="Sprite2D" parent="slimeball" unique_id=30904218]
 position = Vector2(197.99998, 602)
+scale = Vector2(2.2296152, 2.326731)
+texture = ExtResource("3_16pka")
+
+[node name="slimeball2" type="Area2D" parent="." unique_id=609466325]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimeball2" unique_id=1948122005]
+position = Vector2(1572, 192)
+shape = SubResource("CircleShape2D_ibu4m")
+
+[node name="Sprite2D" type="Sprite2D" parent="slimeball2" unique_id=310670578]
+position = Vector2(1598, 223)
+scale = Vector2(2.2296152, 2.326731)
+texture = ExtResource("3_16pka")
+
+[node name="slimeball3" type="Area2D" parent="." unique_id=2055419397]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimeball3" unique_id=1328997775]
+position = Vector2(485, 131)
+shape = SubResource("CircleShape2D_ibu4m")
+
+[node name="Sprite2D" type="Sprite2D" parent="slimeball3" unique_id=481802936]
+position = Vector2(501, 152)
 scale = Vector2(2.2296152, 2.326731)
 texture = ExtResource("3_16pka")

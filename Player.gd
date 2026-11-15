@@ -15,7 +15,7 @@ var facing_dir: int = 1
 
 @onready var hearts_container: HBoxContainer = $CanvasLayer/HeartsContainer
 @onready var attack_area: Area2D = $AttackArea
-@onready var attack_visual: ColorRect = $AttackArea/ColorRect
+@onready var attack_visual: TextureRect = $AttackArea/ColorRect
 
 func _ready() -> void:
 	attack_area.monitoring = false
