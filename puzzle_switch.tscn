@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c0m20hcrulhpg"]
+
+[ext_resource type="Script" path="res://puzzle_switch.gd" id="1_ig6ws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
+size = Vector2(69, 81)
+
+[node name="Puzzle switch" type="Area2D" unique_id=1594152793]
+script = ExtResource("1_ig6ws")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=297923369]
+position = Vector2(189, 156)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1923438839]
+offset_left = 170.0
+offset_top = 138.0
+offset_right = 210.0
+offset_bottom = 178.0

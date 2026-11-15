@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cudjr7jx0qfeg"]
+
+[ext_resource type="Script" path="res://slime_boss.gd" id="1_k5j48"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ikdr8"]
+radius = 228.17757
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
+size = Vector2(563, 561)
+
+[node name="SlimeBoss" type="CharacterBody2D" unique_id=1984789938]
+script = ExtResource("1_k5j48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1287862809]
+top_level = true
+position = Vector2(1431, 463)
+shape = SubResource("CircleShape2D_ikdr8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=62759555]
+offset_left = 1176.0
+offset_top = 215.0
+offset_right = 1679.0
+offset_bottom = 715.0
+color = Color(0.22400057, 0.5595525, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=189052985]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1894387633]
+position = Vector2(1426, 464)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1599339203]
+
+[node name="BossHealthBar" type="ProgressBar" parent="CanvasLayer" unique_id=1292846656]
+offset_left = 634.0
+offset_top = 1.0
+offset_right = 1418.0
+offset_bottom = 48.0
+max_value = 20.0
+value = 20.0
+metadata/_edit_use_anchors_ = true

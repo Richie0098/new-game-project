@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://q16p1oegl1i2"]
+
+[ext_resource type="Texture2D" uid="uid://divpb7873xnnc" path="res://pad.png" id="1_6do1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
+size = Vector2(413.5, 189.5)
+
+[node name="bounce" type="Node2D" unique_id=267855068 groups=["bounce pad"]]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2088156515]
+
+[node name="TextureRect" type="TextureRect" parent="Area2D" unique_id=875309896]
+offset_left = 88.5
+offset_top = 49.5
+offset_right = 541.0
+offset_bottom = 253.0
+texture = ExtResource("1_6do1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1505727404]
+position = Vector2(312.25, 161.25)
+shape = SubResource("RectangleShape2D_ikdr8")

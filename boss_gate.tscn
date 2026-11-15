@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://1c51arig4eii"]
+
+[ext_resource type="Script" path="res://boss_gate.gd" id="1_dw4by"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
+size = Vector2(270, 629.5)
+
+[node name="Boss gate" type="StaticBody2D" unique_id=821440250]
+script = ExtResource("1_dw4by")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=405115573]
+position = Vector2(330, 472.25)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=723078045]
+offset_left = 195.0
+offset_top = 153.0
+offset_right = 466.0
+offset_bottom = 784.0
