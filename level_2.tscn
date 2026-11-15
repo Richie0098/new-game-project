@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b16cmc86ys7qa"]
 
 [ext_resource type="PackedScene" uid="uid://b8eax1dbgc614" path="res://beetle.tscn" id="1_jg0dc"]
+[ext_resource type="Texture2D" uid="uid://cklhrhcvgkymb" path="res://pixil-frame-0 (2).png" id="1_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_nmjpi"]
 [ext_resource type="PackedScene" uid="uid://c4tra06lot14w" path="res://door_and_exit.tscn" id="3_xdadj"]
 [ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_1y8me"]
@@ -12,6 +13,11 @@ size = Vector2(1942.5, 11.9999695)
 size = Vector2(268.5, 36)
 
 [node name="Level 2" type="Node2D" unique_id=881445006]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1142032295]
+position = Vector2(882, 551)
+scale = Vector2(8.056, 7.2666664)
+texture = ExtResource("1_n7ypv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=407349135]
 
