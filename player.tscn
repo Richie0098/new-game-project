@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://0vpg72t1ewf5" path="res://Player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://buger22vfrs8e" path="res://playerSheet.png" id="2_onrkg"]
 [ext_resource type="Texture2D" uid="uid://d1ibbfe8sqplk" path="res://heart.png" id="3_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://c201kqm66rjry" path="res://pause_menu.tscn" id="4_hqtel"]
+[ext_resource type="Texture2D" uid="uid://bgasmn5jedlki" path="res://atk_side.png" id="4_sweqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(89, 303)
@@ -72,8 +74,44 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyu7"]
-size = Vector2(101.5, 242)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tscl"]
+size = Vector2(69, 7.629653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
+atlas = ExtResource("4_sweqy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
+atlas = ExtResource("4_sweqy")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
+atlas = ExtResource("4_sweqy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
+atlas = ExtResource("4_sweqy")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikdr8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw050")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b26j0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7ghd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvl01")
+}],
+"loop": 0,
+"name": &"slash",
+"speed": 24.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1032843734 groups=["player"]]
 position = Vector2(842, 236)
@@ -112,13 +150,17 @@ texture = ExtResource("3_i3pqv")
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=857137144]
 
-[node name="Attackbox" type="CollisionShape2D" parent="AttackArea" unique_id=627830259]
-position = Vector2(61.25, 5)
-shape = SubResource("RectangleShape2D_tuyu7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=420459054]
+position = Vector2(76, 8)
+scale = Vector2(1.6754501, 35.40799)
+shape = SubResource("RectangleShape2D_3tscl")
 
-[node name="ColorRect" type="ColorRect" parent="AttackArea" unique_id=234978525]
-offset_left = 53.0
-offset_top = -116.0
-offset_right = 112.0
-offset_bottom = 127.0
-color = Color(0.9239516, 0.84157443, 0, 1)
+[node name="SlashSprite" type="AnimatedSprite2D" parent="AttackArea" unique_id=817674967]
+position = Vector2(97, 7)
+scale = Vector2(14.21875, 13.75)
+sprite_frames = SubResource("SpriteFrames_ikdr8")
+animation = &"slash"
+frame = 3
+frame_progress = 1.0
+
+[node name="pause_menu" parent="." unique_id=1137822292 instance=ExtResource("4_hqtel")]
