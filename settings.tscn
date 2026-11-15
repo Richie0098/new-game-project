@@ -48,15 +48,19 @@ value = 1.0
 
 [node name="LeftKeyButton" type="Button" parent="VBoxContainer" unique_id=1945297646]
 layout_mode = 2
-text = "Move left: A"
+text = "Move left: Z"
 
 [node name="RightKeyButton" type="Button" parent="VBoxContainer" unique_id=2123960691]
 layout_mode = 2
-text = "Move right: D"
+text = "Move right: Esc"
 
 [node name="JumpKeyButton" type="Button" parent="VBoxContainer" unique_id=1339666067]
 layout_mode = 2
-text = "Jump: Space"
+text = "Jump: -"
+
+[node name="JumpKeyButton2" type="Button" parent="VBoxContainer" unique_id=1086985152]
+layout_mode = 2
+text = "Attack: G"
 
 [node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1466124836]
 layout_mode = 2
