@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const ACCELERATION = 1800.0
 const FRICTION = 2000.0
-const JUMP_VELOCITY = -650.0
+var JUMP_VELOCITY = -650.0
 const COYOTE_TIME = 0.1
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -22,6 +22,23 @@ func _ready() -> void:
 	attack_visual.visible = false
 	attack_area.body_entered.connect(_on_attack_area_body_entered)
 	_update_hearts_ui()
+	$AnimatedSprite2D.play()
+
+func _process(delta: float) -> void:
+	if is_on_floor():
+		if velocity.x == 0:
+			$AnimatedSprite2D.animation = "idle"
+		else:
+			$AnimatedSprite2D.animation = "walk"
+	else:
+		if velocity.y < 0:
+			$AnimatedSprite2D.animation = "jump"
+		else:
+			$AnimatedSprite2D.animation = "fall"
+	if velocity.x < 0:
+		$AnimatedSprite2D.scale.x = -8
+	else:
+		$AnimatedSprite2D.scale.x = 8
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
@@ -95,3 +112,9 @@ func _update_hearts_ui() -> void:
 	var hearts := hearts_container.get_children()
 	for i in range(hearts.size()):
 		hearts[i].visible = i < health
+
+func _on_bounce_area_entered(area: Area2D) -> void:
+	JUMP_VELOCITY = -1300
+
+func _on_bounce_area_exited(area: Area2D) -> void:
+	JUMP_VELOCITY = -650

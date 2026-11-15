@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://djrngd6f6bun3" path="res://SWORD.png" id="4_hqtel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
-size = Vector2(89, 304)
+size = Vector2(89, 303)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("2_onrkg")
@@ -80,9 +80,8 @@ size = Vector2(101.5, 242)
 position = Vector2(842, 236)
 script = ExtResource("1_4flbx")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=975149066]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139063727]
+position = Vector2(0, 7.5)
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=896252669]
