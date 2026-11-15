@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cu2mnc8078edf" path="res://level_1.gd" id="1_5hph3"]
 [ext_resource type="PackedScene" uid="uid://b8eax1dbgc614" path="res://beetle.tscn" id="1_hn12h"]
+[ext_resource type="Texture2D" uid="uid://dpdoktgw4adan" path="res://Sprite-0009.png" id="2_5hph3"]
 [ext_resource type="PackedScene" uid="uid://c4tra06lot14w" path="res://door_and_exit.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_5hph3"]
 [ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="5_rka8t"]
@@ -11,6 +12,12 @@ size = Vector2(1965, 38)
 
 [node name="Level 1" type="Node2D" unique_id=1352761477]
 script = ExtResource("1_5hph3")
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1497966774]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(8, 8)
+texture = ExtResource("2_5hph3")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2089470412]
 offset_left = -21.0
