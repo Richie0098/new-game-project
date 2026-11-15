@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c4tra06lot14w" path="res://door_and_exit.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_5hph3"]
 [ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="5_rka8t"]
+[ext_resource type="AudioStream" uid="uid://bm128lhdn5krw" path="res://Untitled song (Nov 153A58 PM).mp3" id="7_j7kpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1965, 38)
@@ -77,3 +78,8 @@ next_level = null
 
 [node name="CharacterBody2D2" parent="." unique_id=1153452522 instance=ExtResource("5_rka8t")]
 position = Vector2(1115, 952)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1482575665]
+stream = ExtResource("7_j7kpp")
+autoplay = true
+parameters/looping = true
