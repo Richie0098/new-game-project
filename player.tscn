@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Script" uid="uid://0vpg72t1ewf5" path="res://Player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://bfyyryyvvodr5" path="res://heart.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://buger22vfrs8e" path="res://playerSheet.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(89, 304)
@@ -72,7 +72,6 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=1032843734 groups=["player"]]
-position = Vector2(463, 190)
 script = ExtResource("1_4flbx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=975149066]
@@ -84,5 +83,4 @@ shape = SubResource("RectangleShape2D_ikdr8")
 texture_filter = 1
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_i3pqv")
-animation = &"walk"
-frame_progress = 0.103657655
+animation = &"fall"
