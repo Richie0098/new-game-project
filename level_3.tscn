@@ -2,11 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bwu34qahrid64" path="res://pixil-frame-0 (1).png" id="1_1fhj5"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ayd5w"]
-[ext_resource type="Texture2D" uid="uid://divpb7873xnnc" path="res://pad.png" id="2_j8bo8"]
 [ext_resource type="Texture2D" uid="uid://ptjihdkxdext" path="res://smileball.png" id="3_16pka"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jybc2"]
-size = Vector2(256, 100)
+[ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_j8bo8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1934.5, 51)
@@ -23,25 +20,10 @@ radius = 58.077534
 position = Vector2(3, 8)
 
 [node name="background" type="Sprite2D" parent="." unique_id=1494566000]
-texture_filter = 1
 position = Vector2(1000, 521)
 rotation = -1.5707964
 scale = Vector2(20.204107, 19.7)
 texture = ExtResource("1_1fhj5")
-
-[node name="pad" type="StaticBody2D" parent="." unique_id=770414655]
-position = Vector2(960, 1016)
-
-[node name="Sprite2D" type="Sprite2D" parent="pad" unique_id=1074291149]
-texture_filter = 1
-scale = Vector2(8, 8)
-texture = ExtResource("2_j8bo8")
-
-[node name="Area2D" type="Area2D" parent="pad" unique_id=309046910]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pad/Area2D" unique_id=1714035972]
-position = Vector2(0, -14)
-shape = SubResource("RectangleShape2D_jybc2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=359958707]
 
@@ -109,15 +91,6 @@ color = Color(0.09868235, 0, 0.77512485, 1)
 
 [node name="slimeball" type="Area2D" parent="." unique_id=779853925]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slimeball" unique_id=452163258]
-position = Vector2(187, 586)
-shape = SubResource("CircleShape2D_ibu4m")
-
-[node name="Sprite2D" type="Sprite2D" parent="slimeball" unique_id=30904218]
-position = Vector2(197.99998, 602)
-scale = Vector2(2.2296152, 2.326731)
-texture = ExtResource("3_16pka")
-
 [node name="slimeball2" type="Area2D" parent="." unique_id=609466325]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="slimeball2" unique_id=1948122005]
@@ -135,10 +108,17 @@ texture = ExtResource("3_16pka")
 position = Vector2(485, 131)
 shape = SubResource("CircleShape2D_ibu4m")
 
-[node name="Sprite2D" type="Sprite2D" parent="slimeball3" unique_id=481802936]
-position = Vector2(501, 152)
-scale = Vector2(2.2296152, 2.326731)
-texture = ExtResource("3_16pka")
+[node name="CharacterBody2D4" parent="." unique_id=1153452522 instance=ExtResource("4_j8bo8")]
+position = Vector2(457, 564)
 
-[connection signal="area_entered" from="pad/Area2D" to="Player" method="_on_pad_area_entered"]
-[connection signal="area_exited" from="pad/Area2D" to="Player" method="_on_pad_area_exited"]
+[node name="CharacterBody2D5" parent="." unique_id=1496407786 instance=ExtResource("4_j8bo8")]
+position = Vector2(1529, 950)
+
+[node name="CharacterBody2D6" parent="." unique_id=712345006 instance=ExtResource("4_j8bo8")]
+position = Vector2(1741, 955)
+
+[node name="CharacterBody2D8" parent="." unique_id=2005431435 instance=ExtResource("4_j8bo8")]
+position = Vector2(2921, 1784)
+
+[node name="CharacterBody2D7" parent="." unique_id=1070216582 instance=ExtResource("4_j8bo8")]
+position = Vector2(1771, 197)
