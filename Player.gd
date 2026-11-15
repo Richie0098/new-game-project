@@ -142,8 +142,8 @@ func _update_hearts_ui() -> void:
 	for i in range(hearts.size()):
 		hearts[i].visible = i < health
 
-func _on_bounce_area_entered(area: Area2D) -> void:
-	jump_velocity = -1350.0
+func _on_pad_area_entered(area: Area2D) -> void:
+	jump_velocity = -1300
 
-func _on_bounce_area_exited(area: Area2D) -> void:
-	jump_velocity = -650.0
+func _on_pad_area_exited(area: Area2D) -> void:
+	jump_velocity = -650

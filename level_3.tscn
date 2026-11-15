@@ -2,7 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bwu34qahrid64" path="res://pixil-frame-0 (1).png" id="1_1fhj5"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ayd5w"]
+[ext_resource type="Texture2D" uid="uid://divpb7873xnnc" path="res://pad.png" id="2_j8bo8"]
 [ext_resource type="Texture2D" uid="uid://ptjihdkxdext" path="res://smileball.png" id="3_16pka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jybc2"]
+size = Vector2(256, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1934.5, 51)
@@ -24,6 +28,20 @@ position = Vector2(1000, 521)
 rotation = -1.5707964
 scale = Vector2(20.204107, 19.7)
 texture = ExtResource("1_1fhj5")
+
+[node name="pad" type="StaticBody2D" parent="." unique_id=770414655]
+position = Vector2(960, 1016)
+
+[node name="Sprite2D" type="Sprite2D" parent="pad" unique_id=1074291149]
+texture_filter = 1
+scale = Vector2(8, 8)
+texture = ExtResource("2_j8bo8")
+
+[node name="Area2D" type="Area2D" parent="pad" unique_id=309046910]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pad/Area2D" unique_id=1714035972]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_jybc2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=359958707]
 
@@ -121,3 +139,6 @@ shape = SubResource("CircleShape2D_ibu4m")
 position = Vector2(501, 152)
 scale = Vector2(2.2296152, 2.326731)
 texture = ExtResource("3_16pka")
+
+[connection signal="area_entered" from="pad/Area2D" to="Player" method="_on_pad_area_entered"]
+[connection signal="area_exited" from="pad/Area2D" to="Player" method="_on_pad_area_exited"]
