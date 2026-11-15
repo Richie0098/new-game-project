@@ -6,27 +6,39 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(89, 304)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bdyq3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
 atlas = ExtResource("2_onrkg")
-region = Rect2(0, 0, 20, 40)
+region = Rect2(0, 80, 21, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o4hr8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("2_onrkg")
-region = Rect2(0, 80, 20, 40)
+region = Rect2(0, 0, 21, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ihsd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
 atlas = ExtResource("2_onrkg")
-region = Rect2(0, 40, 20, 40)
+region = Rect2(21, 80, 21, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_elfje"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
 atlas = ExtResource("2_onrkg")
-region = Rect2(20, 40, 20, 40)
+region = Rect2(0, 40, 21, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(21, 40, 21, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i3pqv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bdyq3")
+"texture": SubResource("AtlasTexture_i3pqv")
+}],
+"loop": 1,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onrkg")
 }],
 "loop": 1,
 "name": &"idle",
@@ -34,7 +46,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o4hr8")
+"texture": SubResource("AtlasTexture_2hs0m")
 }],
 "loop": 1,
 "name": &"jump",
@@ -42,10 +54,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1ihsd")
+"texture": SubResource("AtlasTexture_hqtel")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_elfje")
+"texture": SubResource("AtlasTexture_sweqy")
 }],
 "loop": 1,
 "name": &"walk",
@@ -63,4 +75,4 @@ shape = SubResource("RectangleShape2D_ikdr8")
 texture_filter = 1
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_i3pqv")
-animation = &"jump"
+animation = &"walk"
