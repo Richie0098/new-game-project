@@ -62,6 +62,10 @@ text = "Jump: -"
 layout_mode = 2
 text = "Attack: G"
 
+[node name="PauseKeyButton" type="Button" parent="VBoxContainer" unique_id=1277405850]
+layout_mode = 2
+text = "Pause:"
+
 [node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1466124836]
 layout_mode = 2
 text = "Back to title"

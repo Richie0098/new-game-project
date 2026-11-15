@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c201kqm66rjry"]
+
+[ext_resource type="Script" uid="uid://c67dmus8fc8bq" path="res://pause_menu.gd" id="1_hdmo1"]
+
+[node name="pause_menu" type="CanvasLayer" unique_id=1137822292]
+process_mode = 3
+script = ExtResource("1_hdmo1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=968836538]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.019607844)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1943250685]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -68.0
+offset_right = 325.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer" unique_id=974402167]
+layout_mode = 2
+text = "Resume Level"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=366211505]
+layout_mode = 2
+text = "Restart Level"
+
+[node name="TitleButton" type="Button" parent="VBoxContainer" unique_id=223253633]
+layout_mode = 2
+text = "Quit to Title"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=253543905]
+layout_mode = 2
+text = "Settings"
