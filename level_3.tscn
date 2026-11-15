@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dhrlh58k2ijcx"]
 
+[ext_resource type="Texture2D" uid="uid://bwu34qahrid64" path="res://pixil-frame-0 (1).png" id="1_1fhj5"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ayd5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
@@ -7,8 +8,16 @@ size = Vector2(1934.5, 51)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jybc2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xj5le"]
+size = Vector2(994.5, 80)
+
 [node name="level 3" type="Node2D" unique_id=1736334487]
 position = Vector2(3, 8)
+
+[node name="background" type="Sprite2D" parent="." unique_id=1494566000]
+position = Vector2(1033, 592)
+scale = Vector2(20.69, 10.389999)
+texture = ExtResource("1_1fhj5")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=359958707]
 
@@ -33,4 +42,30 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_jybc2")
 
 [node name="Player" parent="." unique_id=1032843734 instance=ExtResource("1_ayd5w")]
-position = Vector2(326, 234)
+position = Vector2(278, 888)
+
+[node name="platform" type="StaticBody2D" parent="." unique_id=236098668]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=347728012]
+position = Vector2(470, 684)
+shape = SubResource("RectangleShape2D_xj5le")
+
+[node name="ColorRect" type="ColorRect" parent="platform" unique_id=1398251747]
+offset_left = -23.0
+offset_top = 637.0
+offset_right = 976.0
+offset_bottom = 728.0
+color = Color(0.09868235, 0, 0.77512485, 1)
+
+[node name="platform2" type="StaticBody2D" parent="." unique_id=205485346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=1189316573]
+position = Vector2(1563, 690)
+shape = SubResource("RectangleShape2D_xj5le")
+
+[node name="ColorRect" type="ColorRect" parent="platform2" unique_id=440960507]
+offset_left = 1075.0
+offset_top = 646.0
+offset_right = 2074.0
+offset_bottom = 737.0
+color = Color(0.09868235, 0, 0.77512485, 1)
