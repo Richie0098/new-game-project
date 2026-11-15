@@ -126,6 +126,7 @@ rotation = 0.19808446
 texture = ExtResource("4_hqtel")
 
 [node name="Sprite2D" type="Sprite2D" parent="AttackArea" unique_id=1168257756]
-position = Vector2(89.000015, 23.500008)
+position = Vector2(7.1525574e-06, 58.00001)
+rotation = -2.2165682
 scale = Vector2(1.34, 3.3100004)
 texture = ExtResource("4_hqtel")

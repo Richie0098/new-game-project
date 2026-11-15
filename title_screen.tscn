@@ -1,22 +1,23 @@
 [gd_scene format=3 uid="uid://btg117njqy6w6"]
 
 [ext_resource type="Script" uid="uid://ca7u754b2ucu0" path="res://title_screen.gd" id="1_v6p8y"]
+[ext_resource type="Texture2D" uid="uid://dlna8g7mdvru0" path="res://intro.png" id="2_ak2if"]
 
 [node name="Title screen" type="Node2D" unique_id=128551134]
 script = ExtResource("1_v6p8y")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=985499365]
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1964936155]
+position = Vector2(960.5, 591)
+scale = Vector2(4.8225, 5.8700004)
+texture = ExtResource("2_ak2if")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1623968218]
-offset_left = 574.0
-offset_top = 385.0
-offset_right = 1306.0
-offset_bottom = 460.0
+offset_left = 570.0
+offset_top = 356.0
+offset_right = 1360.0
+offset_bottom = 502.0
 theme_override_font_sizes/normal_font_size = 36
-text = "Hello and welcome to : (add game name)"
+text = "Hello and welcome to : THE PEAKKEST GAME EVR!!!	"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1391565057]
 offset_left = 817.0
