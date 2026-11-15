@@ -6,21 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_1y8me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_200mo"]
-size = Vector2(1757, 11.9999695)
+size = Vector2(1942.5, 11.9999695)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
-size = Vector2(219, 29.5)
+size = Vector2(268.5, 36)
 
 [node name="Level 2" type="Node2D" unique_id=881445006]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=407349135]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2088150235]
-position = Vector2(582, 657)
+position = Vector2(952.75, 1081)
 shape = SubResource("RectangleShape2D_200mo")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=888831188]
-position = Vector2(1163, 216)
+position = Vector2(1913, 471)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_200mo")
 
@@ -34,26 +34,26 @@ position = Vector2(585, -7)
 shape = SubResource("RectangleShape2D_200mo")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=751752875]
-position = Vector2(866, 576.75)
+position = Vector2(1487.25, 878)
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=307969143]
-position = Vector2(558, 473)
+position = Vector2(998, 671)
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=555629452]
-position = Vector2(288, 412)
+position = Vector2(591, 499)
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1629530027]
-position = Vector2(22, 343)
+position = Vector2(126, 579)
 shape = SubResource("RectangleShape2D_ikdr8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1733354963]
-offset_left = -92.0
-offset_top = 648.0
-offset_right = 1248.0
-offset_bottom = 663.0
+offset_left = -9.0
+offset_top = 1070.0
+offset_right = 1916.0
+offset_bottom = 1090.0
 
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=1376855715]
 offset_left = -2.0
@@ -63,57 +63,57 @@ offset_bottom = -95.0
 rotation = 1.5707964
 
 [node name="ColorRect4" type="ColorRect" parent="." unique_id=136215410]
-offset_left = 1177.0
-offset_top = -82.0
-offset_right = 2517.0
-offset_bottom = -67.0
+offset_left = 1922.0
+offset_top = -165.0
+offset_right = 3262.0
+offset_bottom = -150.0
 rotation = 1.5707964
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1140020362]
-offset_left = -95.0
+offset_left = -12.0
 offset_top = -14.0
-offset_right = 1245.0
+offset_right = 1929.0
 offset_bottom = 1.0
 
 [node name="ColorRect5" type="ColorRect" parent="." unique_id=1146991114]
-offset_left = 453.0
-offset_top = 460.0
-offset_right = 671.0
-offset_bottom = 490.0
+offset_left = 855.0
+offset_top = 651.0
+offset_right = 1137.0
+offset_bottom = 693.0
 
 [node name="ColorRect8" type="ColorRect" parent="." unique_id=337121375]
-offset_left = 754.0
-offset_top = 565.0
-offset_right = 972.0
-offset_bottom = 595.0
+offset_left = 1353.0
+offset_top = 863.0
+offset_right = 1618.0
+offset_bottom = 893.0
 
 [node name="ColorRect6" type="ColorRect" parent="." unique_id=340964475]
-offset_left = 176.0
-offset_top = 396.0
-offset_right = 394.0
-offset_bottom = 426.0
+offset_left = 453.0
+offset_top = 478.0
+offset_right = 723.0
+offset_bottom = 522.0
 
 [node name="ColorRect7" type="ColorRect" parent="." unique_id=226960184]
-offset_left = -80.0
-offset_top = 329.0
-offset_right = 138.0
-offset_bottom = 359.0
+offset_left = -7.0
+offset_top = 558.0
+offset_right = 254.0
+offset_bottom = 599.0
 
 [node name="CharacterBody2D" parent="." unique_id=1867351165 instance=ExtResource("1_jg0dc")]
-position = Vector2(794, 404)
+position = Vector2(1489, 675)
 
 [node name="CharacterBody2D3" parent="." unique_id=1544377945 instance=ExtResource("1_jg0dc")]
-position = Vector2(24, 481)
+position = Vector2(430, 314)
 
 [node name="CharacterBody2D2" parent="." unique_id=1615361619 instance=ExtResource("1_jg0dc")]
-position = Vector2(419, 478)
+position = Vector2(959, 403)
 
 [node name="Player" parent="." unique_id=1032843734 instance=ExtResource("2_nmjpi")]
-position = Vector2(1050, 353)
+position = Vector2(1821, 891)
 
 [node name="Door and Exit" parent="." unique_id=1667387201 instance=ExtResource("3_xdadj")]
-position = Vector2(-1118, -315)
+position = Vector2(-1094, -93)
 next_level = "uid://dhrlh58k2ijcx"
 
 [node name="CharacterBody2D4" parent="." unique_id=1153452522 instance=ExtResource("4_1y8me")]
-position = Vector2(567, 189)
+position = Vector2(1180, 829)

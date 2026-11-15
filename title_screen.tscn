@@ -6,23 +6,23 @@
 script = ExtResource("1_v6p8y")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=985499365]
-offset_right = 1154.0
-offset_bottom = 649.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1623968218]
-offset_left = 212.0
-offset_top = 151.0
-offset_right = 944.0
-offset_bottom = 226.0
+offset_left = 574.0
+offset_top = 385.0
+offset_right = 1306.0
+offset_bottom = 460.0
 theme_override_font_sizes/normal_font_size = 36
 text = "Hello and welcome to : (add game name)"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1391565057]
-offset_left = 455.0
-offset_top = 330.0
-offset_right = 680.0
-offset_bottom = 436.0
+offset_left = 817.0
+offset_top = 564.0
+offset_right = 1042.0
+offset_bottom = 670.0
 
 [node name="start" type="Button" parent="VBoxContainer" unique_id=1598305279]
 layout_mode = 2

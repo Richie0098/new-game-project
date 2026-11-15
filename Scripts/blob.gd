@@ -13,8 +13,8 @@ func _physics_process(delta: float) -> void:
 
 func StateMachine() -> void:
 	playerRoot = $"../Player"
-	if GetDist(playerRoot.position.x, playerRoot.position.y, position.x, position.y) < 300 and is_on_floor():
-		velocity += Vector2(0, -600)
+	if GetDist(playerRoot.position.x, playerRoot.position.y, position.x, position.y) < 400 and is_on_floor():
+		velocity += Vector2(0, -800)
 	if is_on_floor():
 		if playerRoot.position.x < position.x:
 			velocity.x = -200
