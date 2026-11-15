@@ -2,11 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwu34qahrid64" path="res://pixil-frame-0 (1).png" id="1_1fhj5"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ayd5w"]
-[ext_resource type="Texture2D" uid="uid://divpb7873xnnc" path="res://pad.png" id="2_j8bo8"]
 [ext_resource type="Texture2D" uid="uid://ptjihdkxdext" path="res://smileball.png" id="3_16pka"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jybc2"]
-size = Vector2(256, 102)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1934.5, 51)
@@ -27,21 +23,6 @@ position = Vector2(1000, 521)
 rotation = -1.5707964
 scale = Vector2(20.204107, 19.7)
 texture = ExtResource("1_1fhj5")
-
-[node name="pad1" type="StaticBody2D" parent="." unique_id=1378382368]
-position = Vector2(971, 1020)
-
-[node name="Sprite2D" type="Sprite2D" parent="pad1" unique_id=922911471]
-texture_filter = 1
-position = Vector2(-2, 15)
-scale = Vector2(8, 8)
-texture = ExtResource("2_j8bo8")
-
-[node name="Area2D" type="Area2D" parent="pad1" unique_id=1986695801]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pad1/Area2D" unique_id=1959983006]
-position = Vector2(-2, 2)
-shape = SubResource("RectangleShape2D_jybc2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=359958707]
 
@@ -66,7 +47,7 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_jybc2")
 
 [node name="Player" parent="." unique_id=1032843734 instance=ExtResource("1_ayd5w")]
-position = Vector2(278, 888)
+position = Vector2(273, 878)
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=236098668]
 
@@ -118,5 +99,24 @@ position = Vector2(197.99998, 602)
 scale = Vector2(2.2296152, 2.326731)
 texture = ExtResource("3_16pka")
 
-[connection signal="area_entered" from="pad1/Area2D" to="Player" method="_on_bounce_area_entered"]
-[connection signal="area_exited" from="pad1/Area2D" to="Player" method="_on_bounce_area_exited"]
+[node name="slimeball2" type="Area2D" parent="." unique_id=609466325]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimeball2" unique_id=1948122005]
+position = Vector2(1572, 192)
+shape = SubResource("CircleShape2D_ibu4m")
+
+[node name="Sprite2D" type="Sprite2D" parent="slimeball2" unique_id=310670578]
+position = Vector2(1598, 223)
+scale = Vector2(2.2296152, 2.326731)
+texture = ExtResource("3_16pka")
+
+[node name="slimeball3" type="Area2D" parent="." unique_id=2055419397]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimeball3" unique_id=1328997775]
+position = Vector2(485, 131)
+shape = SubResource("CircleShape2D_ibu4m")
+
+[node name="Sprite2D" type="Sprite2D" parent="slimeball3" unique_id=481802936]
+position = Vector2(501, 152)
+scale = Vector2(2.2296152, 2.326731)
+texture = ExtResource("3_16pka")
