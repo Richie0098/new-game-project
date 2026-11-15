@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwu34qahrid64" path="res://pixil-frame-0 (1).png" id="1_1fhj5"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ayd5w"]
+[ext_resource type="Texture2D" uid="uid://ptjihdkxdext" path="res://smileball.png" id="3_16pka"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(1934.5, 51)
@@ -9,14 +10,18 @@ size = Vector2(1934.5, 51)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jybc2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xj5le"]
-size = Vector2(994.5, 80)
+size = Vector2(718.625, 80)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ibu4m"]
+radius = 58.077534
 
 [node name="level 3" type="Node2D" unique_id=1736334487]
 position = Vector2(3, 8)
 
 [node name="background" type="Sprite2D" parent="." unique_id=1494566000]
-position = Vector2(1033, 592)
-scale = Vector2(20.69, 10.389999)
+position = Vector2(1000, 521)
+rotation = -1.5707964
+scale = Vector2(20.204107, 19.7)
 texture = ExtResource("1_1fhj5")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=359958707]
@@ -47,25 +52,49 @@ position = Vector2(278, 888)
 [node name="platform" type="StaticBody2D" parent="." unique_id=236098668]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=347728012]
-position = Vector2(470, 684)
+position = Vector2(369.375, 684)
 shape = SubResource("RectangleShape2D_xj5le")
 
 [node name="ColorRect" type="ColorRect" parent="platform" unique_id=1398251747]
 offset_left = -23.0
 offset_top = 637.0
-offset_right = 976.0
+offset_right = 759.0
 offset_bottom = 728.0
 color = Color(0.09868235, 0, 0.77512485, 1)
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=205485346]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=1189316573]
-position = Vector2(1563, 690)
+position = Vector2(1545, 296)
 shape = SubResource("RectangleShape2D_xj5le")
 
 [node name="ColorRect" type="ColorRect" parent="platform2" unique_id=440960507]
-offset_left = 1075.0
-offset_top = 646.0
-offset_right = 2074.0
-offset_bottom = 737.0
+offset_left = 1186.0
+offset_top = 247.0
+offset_right = 1917.0
+offset_bottom = 338.0
 color = Color(0.09868235, 0, 0.77512485, 1)
+
+[node name="platform3" type="StaticBody2D" parent="." unique_id=303330069]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3" unique_id=94495852]
+position = Vector2(362, 245)
+shape = SubResource("RectangleShape2D_xj5le")
+
+[node name="ColorRect" type="ColorRect" parent="platform3" unique_id=1282631504]
+offset_left = -12.0
+offset_top = 186.0
+offset_right = 719.0
+offset_bottom = 277.0
+color = Color(0.09868235, 0, 0.77512485, 1)
+
+[node name="slimeball" type="Area2D" parent="." unique_id=779853925]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimeball" unique_id=452163258]
+position = Vector2(187, 586)
+shape = SubResource("CircleShape2D_ibu4m")
+
+[node name="Sprite2D" type="Sprite2D" parent="slimeball" unique_id=30904218]
+position = Vector2(197.99998, 602)
+scale = Vector2(2.2296152, 2.326731)
+texture = ExtResource("3_16pka")
