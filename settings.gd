@@ -1,4 +1,3 @@
-
 extends Control
 
 @onready var volume_slider: HSlider = $VBoxContainer/VolumeSlider
@@ -6,6 +5,7 @@ extends Control
 @onready var left_btn: Button = $VBoxContainer/LeftKeyButton
 @onready var right_btn: Button = $VBoxContainer/RightKeyButton
 @onready var jump_btn: Button = $VBoxContainer/JumpKeyButton
+@onready var attack_btn: Button = $VBoxContainer/AttackKeyButton
 @onready var back_btn: Button = $VBoxContainer/BackButton
 
 var action_to_remap: String = ""
@@ -23,6 +23,7 @@ func _ready() -> void:
 	left_btn.pressed.connect(func(): _start_remapping("ui_left", left_btn))
 	right_btn.pressed.connect(func(): _start_remapping("ui_right", right_btn))
 	jump_btn.pressed.connect(func(): _start_remapping("ui_accept", jump_btn))
+	attack_btn.pressed.connect(func(): _start_remapping("ui_attack", attack_btn))
 	back_btn.pressed.connect(_on_back_pressed)
 
 	_update_key_labels()
@@ -53,6 +54,7 @@ func _update_key_labels() -> void:
 	left_btn.text = "Move Left: " + _get_action_key("ui_left")
 	right_btn.text = "Move Right: " + _get_action_key("ui_right")
 	jump_btn.text = "Jump: " + _get_action_key("ui_accept")
+	attack_btn.text = "Attack: " + _get_action_key("ui_attack")
 
 func _get_action_key(action: String) -> String:
 	var events := InputMap.action_get_events(action)

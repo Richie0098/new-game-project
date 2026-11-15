@@ -58,7 +58,7 @@ text = "Move right: Esc"
 layout_mode = 2
 text = "Jump: -"
 
-[node name="JumpKeyButton2" type="Button" parent="VBoxContainer" unique_id=1086985152]
+[node name="AttackKeyButton" type="Button" parent="VBoxContainer" unique_id=1086985152]
 layout_mode = 2
 text = "Attack: G"
 

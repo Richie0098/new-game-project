@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0vpg72t1ewf5" path="res://Player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://buger22vfrs8e" path="res://playerSheet.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://d1ibbfe8sqplk" path="res://heart.png" id="3_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(89, 303)
@@ -71,7 +72,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyu7"]
+size = Vector2(101.5, 242)
+
 [node name="Player" type="CharacterBody2D" unique_id=1032843734 groups=["player"]]
+position = Vector2(842, 236)
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139063727]
@@ -83,3 +88,37 @@ texture_filter = 1
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_i3pqv")
 animation = &"fall"
+frame_progress = 0.49056855
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=465604910]
+
+[node name="HeartsContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1941743939]
+offset_left = 6.0
+offset_top = -15.0
+offset_right = 314.0
+offset_bottom = 132.0
+
+[node name="Heart" type="TextureRect" parent="CanvasLayer/HeartsContainer" unique_id=1727356686]
+layout_mode = 2
+texture = ExtResource("3_i3pqv")
+
+[node name="Heart2" type="TextureRect" parent="CanvasLayer/HeartsContainer" unique_id=506696352]
+layout_mode = 2
+texture = ExtResource("3_i3pqv")
+
+[node name="Heart3" type="TextureRect" parent="CanvasLayer/HeartsContainer" unique_id=1189233690]
+layout_mode = 2
+texture = ExtResource("3_i3pqv")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=857137144]
+
+[node name="Attackbox" type="CollisionShape2D" parent="AttackArea" unique_id=627830259]
+position = Vector2(61.25, 5)
+shape = SubResource("RectangleShape2D_tuyu7")
+
+[node name="ColorRect" type="ColorRect" parent="AttackArea" unique_id=234978525]
+offset_left = 53.0
+offset_top = -116.0
+offset_right = 112.0
+offset_bottom = 127.0
+color = Color(0.9239516, 0.84157443, 0, 1)
