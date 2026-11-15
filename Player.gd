@@ -22,6 +22,19 @@ func _ready() -> void:
 	attack_visual.visible = false
 	attack_area.body_entered.connect(_on_attack_area_body_entered)
 	_update_hearts_ui()
+	$AnimatedSprite2D.play()
+
+func _process(delta: float) -> void:
+	if is_on_floor():
+		if velocity.x == 0:
+			$AnimatedSprite2D.animation = "idle"
+		else:
+			$AnimatedSprite2D.animation = "walk"
+	else:
+		if velocity.y < 0:
+			$AnimatedSprite2D.animation = "jump"
+		else:
+			$AnimatedSprite2D.animation = "fall"
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
