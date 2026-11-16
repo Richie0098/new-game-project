@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bwu34qahrid64" path="res://pixil-frame-0 (1).png" id="1_1fhj5"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ayd5w"]
 [ext_resource type="Texture2D" uid="uid://divpb7873xnnc" path="res://pad.png" id="2_j8bo8"]
+[ext_resource type="PackedScene" uid="uid://c4tra06lot14w" path="res://door_and_exit.tscn" id="3_6p2dc"]
 [ext_resource type="Texture2D" uid="uid://ptjihdkxdext" path="res://smileball.png" id="3_16pka"]
 [ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_j8bo8"]
 
@@ -42,6 +43,10 @@ texture = ExtResource("2_j8bo8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pad/Area2D" unique_id=1745084659]
 position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_jybc2")
+
+[node name="Door and Exit" parent="Pad" unique_id=1667387201 instance=ExtResource("3_6p2dc")]
+position = Vector2(-2052, -1459)
+next_level = "uid://baqlbs45yt6jh"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=359958707]
 

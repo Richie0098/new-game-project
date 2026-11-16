@@ -1,20 +1,15 @@
 [gd_scene format=3 uid="uid://cudjr7jx0qfeg"]
 
-[ext_resource type="Script" path="res://slime_boss.gd" id="1_k5j48"]
+[ext_resource type="Script" uid="uid://b0ghopas2gpl1" path="res://slime_boss.gd" id="1_k5j48"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ikdr8"]
-radius = 228.17757
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_200mo"]
+size = Vector2(501, 483)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
 size = Vector2(563, 561)
 
 [node name="SlimeBoss" type="CharacterBody2D" unique_id=1984789938]
 script = ExtResource("1_k5j48")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1287862809]
-top_level = true
-position = Vector2(1431, 463)
-shape = SubResource("CircleShape2D_ikdr8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=62759555]
 offset_left = 1176.0
@@ -23,6 +18,10 @@ offset_right = 1679.0
 offset_bottom = 715.0
 color = Color(0.22400057, 0.5595525, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1613156078]
+position = Vector2(1422.5, 469.5)
+shape = SubResource("RectangleShape2D_200mo")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=189052985]
 

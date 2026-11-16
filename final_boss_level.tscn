@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://baqlbs45yt6jh"]
+
+[ext_resource type="PackedScene" uid="uid://cudjr7jx0qfeg" path="res://slime_boss.tscn" id="3_6xp87"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="3_8iakg"]
+[ext_resource type="PackedScene" uid="uid://kxs4rwvvd062" path="res://blob.tscn" id="4_6xp87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdr8"]
+size = Vector2(1954, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyu7"]
+size = Vector2(300.5, 459)
+
+[node name="FinalBossLevel" type="Node2D" unique_id=1670824135]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1109612587]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1817775596]
+position = Vector2(967, 0)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1910165787]
+position = Vector2(959, 1094)
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2012108263]
+position = Vector2(1933, 583)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2066900077]
+position = Vector2(-6, 601)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ikdr8")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=1111920713]
+position = Vector2(815.75, 239.5)
+shape = SubResource("RectangleShape2D_tuyu7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2039548723]
+offset_left = -13.0
+offset_top = 10.0
+offset_right = 4.0
+offset_bottom = 1096.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=476986712]
+offset_left = 1926.0
+offset_top = -33.0
+offset_right = 1943.0
+offset_bottom = 1086.0
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1631849087]
+offset_left = -38.0
+offset_top = 12.595011
+offset_right = -13.404987
+offset_bottom = 2009.9949
+rotation = -1.5707964
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1890633667]
+offset_left = -51.0
+offset_top = 1099.0
+offset_right = -36.53164
+offset_bottom = 3096.4
+rotation = -1.5707964
+
+[node name="ColorRect9" type="ColorRect" parent="." unique_id=1143007472]
+offset_left = 686.0
+offset_top = 10.0
+offset_right = 957.0
+offset_bottom = 491.0
+
+[node name="Player" parent="." unique_id=1032843734 instance=ExtResource("3_8iakg")]
+position = Vector2(77, 894)
+
+[node name="CharacterBody2D" parent="." unique_id=1153452522 instance=ExtResource("4_6xp87")]
+position = Vector2(421, 722)
+
+[node name="SlimeBoss" parent="." unique_id=1984789938 instance=ExtResource("3_6xp87")]
+position = Vector2(103, 206)
